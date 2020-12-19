@@ -1,0 +1,34 @@
+﻿@page "/archive"
+@using System.Globalization
+@inherits BasePage
+@inject BlogProvider BlogProvider
+
+<Title>@BlogProvider.Settings.Title - Archive</Title>
+<PageTitle>Archive</PageTitle>
+@foreach (var postsByMonth in GroupedBlogPosts)
+{
+    <h2 class="font-medium text-xl md:text-2xl mt-4 lg:mt-8">@postsByMonth.Key.Year @GetMonthName(postsByMonth.Key.Month)</h2>
+    <ul class="list-disc list-inside	">
+        @foreach (var post in postsByMonth)
+        {
+            <li><a class="text-blue-900 hover:text-blue-600" href="@("/posts/" + post.Slug)">@post.Title</a></li>
+        }
+    </ul>
+}
+
+@code {
+    IEnumerable<IGrouping<(int Year, int Month), BlogPost>> GroupedBlogPosts = null!;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        GroupedBlogPosts = Posts.GroupBy(i => (i.Date.Year, i.Date.Month))
+            .OrderByDescending(i => i.Key.Year)
+            .ThenByDescending(i => i.Key.Month);
+    }
+
+    static string GetMonthName(int month) => CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(month);
+
+
+}

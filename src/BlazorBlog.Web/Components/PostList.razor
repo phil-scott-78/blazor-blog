@@ -1,0 +1,13 @@
+﻿<div class="mt-8 lg:mt-16">
+    @foreach (var post in BlogPosts)
+    {
+        <div class="mb-4 lg:mb-8 pb-4 lg:pb-8 border-b border-blue-100">
+            <PostSummary BlogPost="@post"></PostSummary>
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public IEnumerable<BlogPost> BlogPosts { get; init; } = null!;
+}

@@ -1,0 +1,25 @@
+﻿@page "/tags/{tagSlug}"
+@inherits BasePage
+
+
+<Title>@BlogSettings.Title - @_title Tagged Posts</Title>
+<PageTitle>&ldquo;@_title&rdquo; Posts</PageTitle>
+<PostList BlogPosts="@_blogPosts"></PostList>
+
+@code {
+    IEnumerable<BlogPost> _blogPosts = null!;
+    string _title = null!;
+
+    [Parameter]
+    public string tagSlug { get; init; } = null!;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        (_title, _blogPosts) = Tags
+            .Where(i => i.Slug.Equals(tagSlug, StringComparison.InvariantCultureIgnoreCase))
+            .Select(i => (i.Title, i.Posts.OrderByDescending(p => p.Date)))
+            .First();
+    }
+
+}

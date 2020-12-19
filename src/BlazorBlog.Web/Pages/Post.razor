@@ -1,0 +1,38 @@
+﻿@inherits BasePage
+@page "/posts/{*postSlug}"
+
+<Title>@BlogSettings.Title - @BlogPost.Title</Title>
+<Meta Property="description" Content="@BlogPost.Description" />
+
+<header class="mb-4 flex flex-col">
+    <PageTitle>@BlogPost.Title</PageTitle>
+    <p class="mt-2 lg:mt-4 mb-1 lg:mb-2 text-sm ">Posted <time>@BlogPost.Date.ToLongDateString()</time></p>
+    <TagList Tags="@BlogPost.Tags"></TagList>
+</header>
+
+<article class="prose prose-sm sm:prose lg:prose-lg font-light text-gray-700 leading-loose">
+    <Markdown FilePath="@BlogPost.AbsolutePath"></Markdown>
+</article>
+
+@inject NavigationManager NavigationManager
+@code {
+    [Parameter]
+    public string PostSlug { get; set; } = null!;
+
+    public BlogPost BlogPost = null!;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        var post = Posts.FirstOrDefault(i => i.Slug.Equals(PostSlug, StringComparison.InvariantCultureIgnoreCase));
+        if (post == null)
+        {
+            NavigationManager.NavigateTo("/404");
+            return;
+        }
+
+        BlogPost = post;
+    }
+
+}

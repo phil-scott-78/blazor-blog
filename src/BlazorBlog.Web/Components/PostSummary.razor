@@ -1,0 +1,16 @@
+﻿<div class="flex flex-col md:flex-row md:flex-wrap md:items-center">
+    <h3 class="md:w-3/4 md:order-2 md:mb-2" ><a class="text-blue-900 hover:text-blue-600 font-medium text-xl md:text-3xl" href="@("/posts/" + BlogPost.Slug)">@BlogPost.Title</a></h3>
+    <time class="mb-2 md:mb-0 text-xs md:text-sm md:w-1/4 md:order-1">
+        @BlogPost.Date.ToString("yyyy MMM dd")
+    </time>
+    <article class="md:w-3/4 md:order-3 md:self-end md:ml-auto">
+        <p class="mb-4">@BlogPost.Description</p>
+        <TagList Tags="@BlogPost.Tags" />
+    </article>
+    
+</div>
+
+@using BlazorBlog.Web.Services
+@code {
+    [Parameter] public BlogPost BlogPost { get; init; } = null!;
+}

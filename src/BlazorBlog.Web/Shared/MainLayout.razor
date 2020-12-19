@@ -1,0 +1,17 @@
+@inherits LayoutComponentBase
+@inject BlogProvider BlogProvider
+
+<header class="fixed top-0 left-0 w-full bg-gray-100 shadow py-2 md:py-4 z-50">
+    <nav class="mx-auto max-w-3xl px-2 lg:px-0">
+        <h1>
+            <a class="font-serif font-light text-xl text-blue-700 flex items-center" href="/">
+                <img src="/img/avatar.png" alt="Avatar image" class="h-12 w-12 mr-2"/>
+                @BlogProvider.Settings.Title
+            </a>
+        </h1>
+    </nav>
+</header>
+
+<main class="mx-auto max-w-3xl px-2 lg:px-0 mt-24 md:mt-32 mb-4 md:mb-16 font-light">
+    @Body
+</main>

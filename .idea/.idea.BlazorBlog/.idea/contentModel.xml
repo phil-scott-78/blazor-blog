@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\phils\.nuget\packages\microsoft.net.test.sdk\16.7.1\build\netcoreapp2.1" t="Include">
+      <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
+    </e>
+    <e p="C:\Users\phils\.nuget\packages\microsoft.testplatform.testhost\16.7.1\build\netcoreapp2.1\x64\testhost.dll" t="Include" />
+    <e p="C:\Users\phils\.nuget\packages\microsoft.testplatform.testhost\16.7.1\build\netcoreapp2.1\x64\testhost.exe" t="Include" />
+    <e p="C:\Users\phils\.nuget\packages\xunit.runner.visualstudio\2.4.3\build\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll" t="Include" />
+    <e p="C:\Users\phils\.nuget\packages\xunit.runner.visualstudio\2.4.3\build\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll" t="Include" />
+    <e p="C:\Users\phils\.nuget\packages\xunit.runner.visualstudio\2.4.3\build\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll" t="Include" />
+    <e p="C:\Users\phils\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\phils\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_BlazorBlog.-1192289822.00" t="ExcludeRecursive" />
+    <e p="R:\Projects\BlazorBlog" t="IncludeFlat">
+      <e p="BlazorBlog.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="src\BlazorBlog.Web" t="IncludeRecursive">
+        <e p="_Imports.razor" t="Include" />
+        <e p="_posts" t="Include">
+          <e p="2016" t="Include">
+            <e p="10" t="Include">
+              <e p="commits.png" t="Include" />
+              <e p="how-i-fixed-roslyn.md" t="Include" />
+              <e p="huge-commit.png" t="Include" />
+              <e p="lambda-assert.png" t="Include" />
+            </e>
+          </e>
+          <e p="2020" t="Include">
+            <e p="08" t="Include">
+              <e p="cqrs-ef-core-repository-pattern.md" t="Include" />
+              <e p="ef-core-5-and-stackoverflow.md" t="Include" />
+              <e p="generated-files-settings.png" t="Include" />
+            </e>
+            <e p="09" t="Include">
+              <e p="commandline-mediatr.md" t="Include" />
+              <e p="external-annotations.md" t="Include" />
+              <e p="quick-documentation.png" t="Include" />
+              <e p="tagging-query-with-ef-core.md" t="Include" />
+              <e p="unused-classes.png" t="Include" />
+              <e p="used-implicitly.png" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="App.razor" t="Include" />
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="BlazorBlog.Web.csproj" t="IncludeRecursive" />
+        <e p="Components" t="Include">
+          <e p="Markdown.cs" t="Include" />
+          <e p="PostList.razor" t="Include" />
+          <e p="PostSummary.razor" t="Include" />
+          <e p="StyledComponents.cs" t="Include" />
+          <e p="TagList.razor" t="Include" />
+        </e>
+        <e p="node_modules\@tailwindcss\typography" t="IncludeRecursive" />
+        <e p="node_modules\autoprefixer" t="IncludeRecursive" />
+        <e p="node_modules\colorette" t="IncludeRecursive" />
+        <e p="node_modules\cross-env" t="IncludeRecursive" />
+        <e p="node_modules\nanoid" t="IncludeRecursive" />
+        <e p="node_modules\postcss" t="IncludeRecursive" />
+        <e p="node_modules\tailwindcss" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="net5.0" t="Include">
+              <e p="BlazorBlog.Web.AssemblyInfo.cs" t="Include" />
+              <e p="BlazorBlog.Web.RazorAssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="package-lock.json" t="Include" />
+        <e p="package.json" t="Include" />
+        <e p="Pages" t="Include">
+          <e p="_Host.cshtml" t="Include" />
+          <e p="Archive.razor" t="Include" />
+          <e p="BasePage.cs" t="Include" />
+          <e p="Index.razor" t="Include" />
+          <e p="Post.razor" t="Include" />
+          <e p="Tag.razor" t="Include" />
+        </e>
+        <e p="postcss.config.js" t="Include" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Services" t="Include">
+          <e p="BlogFrontMatter.cs" t="Include" />
+          <e p="BlogParser.cs" t="Include" />
+          <e p="BlogProvider.cs" t="Include" />
+          <e p="BlogSettings.cs" t="Include" />
+          <e p="MarkdownExtensions.cs" t="Include" />
+          <e p="StringHelper.cs" t="Include" />
+        </e>
+        <e p="Shared" t="Include">
+          <e p="MainLayout.razor" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+        <e p="tailwind.config.js" t="Include" />
+        <e p="web-src" t="Include">
+          <e p="site.css" t="Include" />
+        </e>
+        <e p="wwwroot" t="Include">
+          <e p="css" t="Include">
+            <e p="site.css" t="Include" />
+          </e>
+          <e p="favicon.ico" t="Include" />
+          <e p="img" t="Include">
+            <e p="avatar.png" t="Include" />
+            <e p="avatar.svg" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="tests\BlazorBlog.Tests" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="BlazorBlog.Tests.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="net5.0" t="Include">
+              <e p="BlazorBlog.Tests.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="UnitTest1.cs" t="Include" />
+      </e>
+    </e>
+  </component>
+</project>

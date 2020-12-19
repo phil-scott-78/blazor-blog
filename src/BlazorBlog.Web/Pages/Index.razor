@@ -1,0 +1,8 @@
+@page "/"
+@inherits BasePage
+
+<Title>@BlogSettings.Title</Title>
+<Meta Property="description" Content="@BlogSettings.Description" />
+
+<PageTitle>Recent Posts</PageTitle>
+<PostList BlogPosts="@Posts.OrderByDescending(i => i.Date).Take(5)" />

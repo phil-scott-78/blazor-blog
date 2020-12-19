@@ -1,0 +1,19 @@
+﻿<ul class="flex space-x-2">
+    @foreach (var (slug, title) in Tags.Select(GetTag))
+    {
+        <li>
+            <PillLink href="@("/tags/" + slug)">@title</PillLink>
+        </li>
+    }
+</ul>
+
+@inject BlogProvider BlogProvider
+@code {
+
+    [Parameter]
+    public string[] Tags { get; init; } = null!;
+    
+    (string Slug, string Title) GetTag(string tagName) => BlogProvider.Tags
+        .Select(i => (i.Slug, i.Title))
+        .First(i => i.Slug == StringHelper.UrlFriendly(tagName));
+}
