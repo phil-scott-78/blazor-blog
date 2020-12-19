@@ -15,10 +15,21 @@ jobs:
     steps:
     - uses: actions/checkout@master
 
+    - name: Install node packages
+      working-directory: src/BlazorBlog.Web
+      run: npm i
+    
+    - name: Build prod tailwind
+      working-directory: src/BlazorBlog.Web
+      run: npm run tailwind:prod
+    
     - name: Set up .NET Core
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: '5.0.x'
+
+    - name: Restoring nugets
+      run: dotnet restore
 
     - name: Build with dotnet
       run: dotnet build --configuration Release
