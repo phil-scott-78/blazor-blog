@@ -44,3 +44,11 @@ jobs:
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_6f04d09d97e547cd9e618975c576a8c6 }}
         package: ${{env.DOTNET_ROOT}}/myapp 
+    
+    - name: Clear cloudflare cache
+      uses: jakejarvis/cloudflare-purge-action@v0.3.0
+      env:
+        CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
+        CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}
+
+      
