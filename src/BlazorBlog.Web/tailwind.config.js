@@ -11,6 +11,7 @@ module.exports = {
     purge: [
         './**/*.razor',
         './**/*.cshtml',
+        './Components/StyledComponents.cs'
     ],
     darkMode: 'class', // or 'media' or 'class'
     theme: {
