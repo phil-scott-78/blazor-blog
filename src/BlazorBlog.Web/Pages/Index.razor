@@ -5,4 +5,5 @@
 <Meta Property="description" Content="@BlogSettings.Description" />
 
 <PageTitle>Recent Posts</PageTitle>
-<PostList BlogPosts="@Posts.OrderByDescending(i => i.Date).Take(5)" />
+<PostList class="mt-2 lg:mt-8" BlogPosts="@Posts.OrderByDescending(i => i.Date).Take(5)" />
+<div><a class="text-blue-700 hover:text-blue:500 underline" href="/archive">Older stuff</a> </div>

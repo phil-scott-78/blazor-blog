@@ -7,7 +7,7 @@
 <PageTitle>Archive</PageTitle>
 @foreach (var postsByMonth in GroupedBlogPosts)
 {
-    <h2 class="font-medium text-xl md:text-2xl mt-4 lg:mt-8">@postsByMonth.Key.Year @GetMonthName(postsByMonth.Key.Month)</h2>
+    <h2 class="font-medium text-xl md:text-2xl mt-4 lg:mt-8 mb-2">@postsByMonth.Key.Year @GetMonthName(postsByMonth.Key.Month)</h2>
     <ul class="list-disc list-inside	">
         @foreach (var post in postsByMonth)
         {
