@@ -2,12 +2,7 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-    future: {
-        defaultLineHeights: true,
-        standardFontWeights: true,
-        removeDeprecatedGapUtilities: true,
-        purgeLayersByDefault: true,
-    },
+    mode: 'jit',
     purge: [
         './**/*.razor',
         './**/*.cshtml',

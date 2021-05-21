@@ -23,4 +23,20 @@
     <PackageReference Include="YamlDotNet" Version="9.1.0" />
   </ItemGroup>
 
+  <PropertyGroup>
+    <!-- File with mtime of last successful npm install -->
+    <NpmInstallStampFile>node_modules/.install-stamp</NpmInstallStampFile>
+  </PropertyGroup>
+  <Target Name="NpmInstall"
+          BeforeTargets="BeforeBuild"
+          Inputs="package.json"
+          Outputs="$(NpmInstallStampFile)">
+    <Exec Command="npm install" />
+    <Touch Files="$(NpmInstallStampFile)" AlwaysCreate="true" />
+  </Target>
+  <Target Name="InstallTainwind" AfterTargets="AfterBuild">
+    <Message Text="### AfterBuild ###" Importance="high" />
+    <Exec Command="npm run tailwind" />
+  </Target>
+  
 </Project>

@@ -4,16 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "tailwind": "tailwind build web-src/site.css -o wwwroot/css/site.css",
+    "tailwind": "cross-env NODE_ENV=production tailwind build web-src/site.css -o wwwroot/css/site.css",
     "tailwind:prod": "cross-env NODE_ENV=production tailwind build web-src/site.css -o wwwroot/css/site.css"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@tailwindcss/typography": "^0.3.1",
-    "autoprefixer": "^10.1.0",
-    "postcss": "^8.2.1",
-    "tailwindcss": "^2.0.2"
+    "@tailwindcss/typography": "^0.4.0",
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.3.0",
+    "tailwindcss": "^2.1.2"
   },
   "devDependencies": {
     "cross-env": "^7.0.3"
